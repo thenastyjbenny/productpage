@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Product Page</title>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Product Select</h1>
+  <p>Is the ocean a soup? Is it within a container? How many calories are in the ocean...?</p>
+</div>
+
+<div class="container">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Formula 1 Car</h3>
+      <img src="https://images.unsplash.com/photo-1537402792645-b6d9a3ac3fad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+           alt="formula 1 race car"
+           width="300"
+           height="400"/>
+      <p>It's really fast but don't hit any rocks.</p>
+      <br>
+      <h4>Pick your livery:</h4>
+      <form method="post">
+        <input type="radio" id="Red Bull" name="livery" value="Red Bull">
+        <label for="Red Bull">Red Bull</label><br>
+        <input type="radio" id="Mercedes AMG" name="livery" value="Mercedes AMG">
+        <label for="Mercedes AMG">Mercedes AMG</label><br>
+        <input type="radio" id="Ferrari" name="livery" value="Ferrari">
+        <label for="Ferrari">Ferrari</label><br>
+
+      <br>
+      <h4>What tires would you like with your car?</h4>
+      <input type="checkbox" name="tires" value="soft" id="soft-tires">
+      <label for="soft-tires">Soft Tires</label>
+
+      <input type="checkbox" name="tires" value="medium" id="medium-tires">
+      <label for="medium-tires">Medium Tires</label>
+
+      <input type="checkbox" name="tires" value="hard" id="hard-tires">
+      <label for="hard-tires">Hard Tires</label>
+
+      <br>
+      <h4>How would you like your car delivered?</h4>
+      <select name="shipping-method-f1">
+        <option value="truck">By truck</option>
+        <option value="box">In a box</option>
+        <option value="multiple-pieces">In multiple pieces</option>
+      </select>
+        <button type="submit" class="btn btn-primary">Submit these selections</button>
+      </form>
+    </div>
+
+    <div class="col-sm-6">
+      <h3>Baja Truck</h3>
+      <img src="https://images.unsplash.com/photo-1634575377217-595321d98ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+           alt="baja truck"
+           width="575"
+           height="400"/>
+      <p>It's pretty much asking to hit every rock.</p>
+      <br>
+      <h4>Pick your constructing company:</h4>
+      <form method="post">
+        <input type="radio" id="Ford" name="company" value="Ford">
+        <label for="Ford">Ford</label><br>
+        <input type="radio" id="Chevrolet" name="company" value="Chevrolet">
+        <label for="Chevrolet">Chevrolet</label><br>
+        <input type="radio" id="Subaru" name="company" value="Subaru">
+        <label for="Subaru">Subaru</label><br>
+
+
+      <br>
+      <h4>What tires would you like with your car?</h4>
+      <input type="checkbox" name="tires" value="knobby" id="knobby-tires">
+      <label for="knobby-tires">Knobby Tires</label>
+
+      <input type="checkbox" name="tires" value="slick" id="slick-tires">
+      <label for="slick-tires">Slick Tires</label>
+
+      <br>
+      <h4>How would you like your car delivered?</h4>
+      <select name="shipping-method-truck">
+        <option value="truck">By truck</option>
+        <option value="box">In a box</option>
+        <option value="multiple-pieces">In multiple pieces</option>
+      </select>
+        <button type="submit" class="btn btn-primary">Submit these selections</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<br>
+  <div class="jumbotron text-center">
+  <button class="btn btn-primary" onclick="showhide()">Complete your order</button>
+  </div>
+
+<div class="container">
+<form method="post" id="final-page" style="display:none">
+  <div class="mb-3">
+       <label for="customername1" class="form-label">Name</label>
+        <input type="text" class="form-control" name="cname" id="customername1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never not share your email with anyone else.</div>
+    <span hidden="hidden"> muahhahhahh hahah eha hahahaha gotcha </span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="comments" class="form-label">Comments</label>
+    <input type="text" class="form-control" name="comments" id="comments">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+
+<script type="text/javascript">
+  function showhide() {
+    var y = document.getElementById("final-page");
+    if (y.style.display === "none") {
+      y.style.display = "block";
+    } else {
+      y.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
